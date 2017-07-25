@@ -47,6 +47,7 @@ $ npm start
 - Integrate React / Redux
 - Create customizable examples
 - Create modularized templates (e.g. headers and footers)
+- Live reload on change
 
 ## Author
 
