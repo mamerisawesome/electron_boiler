@@ -11,13 +11,19 @@ const createWindow = () => {
         height: 600,
     })
 
-    // mainWindow.loadURL(html)
+    mainWindow.setMenu(null)
+
     mainWindow.loadURL(`file://${__dirname}/../build/views/index.html`)
 
     // Emitted when the window is closed.
     mainWindow.on('closed', () => {
         mainWindow = null
     })
+
+    // Disallow dev tools
+    mainWindow.webContents.on("devtools-opened", () => {
+        mainWindow.webContents.closeDevTools();
+    });
 }
 
 app.on('ready', createWindow)
