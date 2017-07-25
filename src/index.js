@@ -20,6 +20,16 @@ const createWindow = () => {
         mainWindow = null
     })
 
+    // Disallow opening files on new window 
+    mainWindow.webContents.on('new-window', function(e) {
+        e.preventDefault();
+    });
+
+    // Disallow opening files on window navigation 
+    mainWindow.webContents.on('will-navigate', function(e) {
+        e.preventDefault();
+    });
+
     // Disallow dev tools
     mainWindow.webContents.on("devtools-opened", () => {
         mainWindow.webContents.closeDevTools();
