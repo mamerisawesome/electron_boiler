@@ -2,7 +2,7 @@
     "name": "electron_boiler",
     "productName": "electron_boiler",
     "version": "1.0.0",
-    "description": "My Electron application description",
+    "description": "Electron App Boilerplate",
     "main": "src/index.js",
     "scripts": {
         "start": "gulp pugger && electron-forge start",
