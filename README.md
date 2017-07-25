@@ -1,6 +1,6 @@
 # Electron App Boilerplate
 
-An Electron App boilerplate that is ready to use with Pug and Semantic for the frontend.
+An Electron App boilerplate that is ready to use with Pug and Semantic for the frontend because why not.
 
 ## Requirements
 
