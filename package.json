@@ -1,0 +1,78 @@
+{
+    "name": "electron_boiler",
+    "productName": "electron_boiler",
+    "version": "1.0.0",
+    "description": "My Electron application description",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "gulp pugger && electron-forge start",
+        "build_start": "gulp clean && gulp pugger && gulp assets && gulp minify_css && gulp minify_js && electron-forge start",
+        "build": "gulp clean && gulp pugger && gulp assets && gulp minify_css && gulp minify_js",
+        "minify": "gulp minify_css && gulp minify_js",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "lint": "eslint src"
+    },
+    "keywords": [],
+    "author": "almermendoza",
+    "license": "MIT",
+    "config": {
+        "forge": {
+            "make_targets": {
+                "win32": [
+                    "squirrel"
+                ],
+                "darwin": [
+                    "zip"
+                ],
+                "linux": [
+                    "deb",
+                    "rpm"
+                ]
+            },
+            "electronPackagerConfig": {},
+            "electronWinstallerConfig": {
+                "name": "electron_boiler"
+            },
+            "electronInstallerDebian": {},
+            "electronInstallerRedhat": {},
+            "github_repository": {
+                "owner": "",
+                "name": ""
+            },
+            "windowsStoreConfig": {
+                "packageName": "",
+                "name": "electron_boiler"
+            }
+        }
+    },
+    "dependencies": {
+        "electron-compile": "^6.4.1",
+        "electron-pug": "^1.5.1",
+        "electron-view-renderer": "^1.2.3",
+        "gulp": "^3.9.1",
+        "gulp-minify": "^1.0.0",
+        "gulp-pug": "^3.3.0",
+        "jquery": "^3.2.1",
+        "lodash": "^4.17.4",
+        "pug": "^2.0.0-rc.2",
+        "semantic-ui": "^2.2.11",
+        "uglify-js": "^3.0.26"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "electron-prebuilt-compile": "1.6.11",
+        "eslint": "^4.3.0",
+        "eslint-config-airbnb": "^15.1.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
+        "eslint-plugin-react": "^7.1.0",
+        "gulp-clean-css": "^3.7.0",
+        "gulp-uglify": "^3.0.0",
+        "pump": "^1.0.2",
+        "rimraf": "^2.6.1",
+        "shelljs": "^0.7.8"
+    }
+}

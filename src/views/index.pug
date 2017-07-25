@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Doc Cluster UI
+        link(rel='stylesheet', type='text/css', href='../public/css/semantic.css')
+        link(rel='stylesheet', type='text/css', href='../public/css/style.css')
+        script(src='../public/js/jquery.js')
+        script(src='../public/js/semantic.js')
+    body
+        .ui.middle.aligned.center.aligned.grid
+            .column
+                h2.ui.teal.image.header
+                    .content
+                        | Log-in to your account
+                form.ui.large.form
+                    .ui.stacked.segment
+                        .field
+                            .ui.left.icon.input
+                                i.user.icon
+                                input(type='text', name='email', placeholder='E-mail address')
+                        .field
+                            .ui.left.icon.input
+                                i.lock.icon
+                                input(type='password', name='password', placeholder='Password')
+                        .ui.fluid.large.teal.submit.button Login
+                    .ui.error.message
+                .ui.message
+                    | New to us? 
+                    a(href='#') Sign Up
+
+        script.
+            if (typeof module === 'object') {
+                window.module = module; 
+                module = undefined;
+            }
+        
+        script(src='../public/js/script.js')
+
+        script.
+            if (window.module) module = window.module;
